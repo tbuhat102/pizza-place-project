@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Place Project</title>
+    <div class="container">
+  <img id="banner-logo" src="">
+  <nav>
+    <div id="link-container">
+      <a class="link">Home</a>
+      <a class="link">Menu</a>
+      <a class="link">Directions</a>
+      <a class="link">Coupons</a>
+      <a class="link">Orders</a>
+      <a class="link">Catering</a>
+      <a class="link">Reviews</a>
+    </div>
+  </nav>
+  <h1>Customer Survey</h1>
+  <p>Thank you for taking our customer survey. Your response helps Red Ball Pizza maintain the tradition that has made us the top-rated pizzeria in the metro area. All participants are automatically entered into a monthly drawing to receive a Red Ball Express PizzaFest containing two large pizzas, a 2-liter soda, and a side order of chicken wings. Check your e-mail inbox for contest results.</p>
+  <p>Surveys are private and confidential. Red Ball Pizza will not share your contact information with third parties, ever.</p>
+  <p>Required values are marked by an asterisk (*)</p>
+  <article>
+    <p class="red-caption">Customer Information</p>
+    <form id="customer-information">
+      <div>
+        <label for="name-input">Name*</label>
+        <input type="text" placeholder="first and last name" id="name-input">
+      </div>
+      <div>
+        <label for="address-input">Street Address</label>
+        <input type="text" id="address-input">
+      </div>
+
+      <div>
+        <label for="city-input">City</label>
+        <input type="text" id="city-input">
+      </div>
+
+      <div>
+        <label for="state-input">State</label>
+        <input type="text" id="state-input">
+      </div>
+
+      <div>
+        <label for="postal-code-input">Postal Code</label>
+        <input type="number" id="postal-code-input">
+      </div>
+      <div>
+        <label for="email-input">E-mail*</label>
+        <input type="text" id="email-input">
+      </div>
+      <!--       levi was here => -->
+      <div id="select-holder">
+        <label for="referral-source">Where did you hear about us?
+          (Select all that apply)
+        </label>
+        <select id="referral-source" size="5">
+          <option value="internet">Internet</option>
+          <option value="magazine">Magazine</option>
+          <option value="newspaper">Newspaper</option>
+          <option value="word-of-mouth">Word of Mouth</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="favorite-dish">What's your favorite dish?</label>
+        <input type="text" id="favorite-dish">
+      </div>
+
+      <div>
+        <label for="dine-out-count">How many times do you dine out per month?</label><input type="number" id="dine-out-count" min="0" value="0">
+      </div>
+
+      <div>
+        <input type="checkbox" id="check-b">
+        <p id="check-p">Add me to your mailing list for great coupons and specials!</p>
+      </div>
+
+    </form>
+  </article>
+  <aside>
+    <p class="red-caption">Share Your Experience at Red Ball Pizza</p>
+
+    <form id="share-experience">
+      <div>
+        <label for="d-o-v">Date of Visit</label>
+        <input type="date" id="d-o-v"></input>
+      </div>
+
+      <div>
+        <label for="order-type">Order Type</label>
+        <select name="ot" id="order-type">
+          <option>Carry Out</option>
+          <option>Delivery</option>
+          <option>Dine In</option>
+          <option>Take 'n Bake</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="radio-one">Was your service friendly?</label>
+        <input type="radio" id="radio-one"></input>
+      </div>
+
+      <div>
+        <label for="radio-two">Was your order correct?</label>
+        <input type="radio" id="radio-two"></input>
+      </div>
+
+      <div>
+        <label for="radio-three">Was your food hot?</label>
+        <input type="radio" id="radio-three"></input>
+      </div>
+
+      <div>
+        <label for="o-e">Rate your overall experience <br /> (0 = poor, 10 = great)</label>
+        <input id="o-e"></input>
+      </div>
+
+      <div>
+        <label for="big">Tell us more about your experience</label>
+        <input id="big"></input>
+      </div>
+    </form>
+
+  </aside>
+</div> <!-- end container class -->
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+}
+div.container {
+  width: 80vw;
+  height: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: -5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+img#banner-logo {
+  width: 80vw;
+}
+nav {
+  height: 50px;
+  background-image: linear-gradient(maroon, red);
+}
+#link-container {
+  width: 80%;
+  margin: auto;
+}
+a.link {
+  width: 11.5%;
+  text-align: center;
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+  border: 1px solid black;
+  color: white;
+  font-family: sans-serif, "Arial";
+  overflow: hidden;
+}
+a:hover {
+  color: yellow;
+}
+input#name-input::placeholder {
+  color: red;
+}
+h1 {
+  color: maroon;
+  font-size: 2rem;
+  font-family: sans-serif, "Arial";
+  margin-left: 30px;
+}
+p {
+  margin: 30px;
+}
+article {
+  margin-top: 50px;
+  width: 45%;
+  background-color: #feeeaa;
+  border: 1px solid black;
+  border-radius: 1.5em;
+  position: relative;
+  float: left;
+  margin-left: 15px;
+  padding: 10px;
+  padding-top: 30px;
+  box-shadow: -5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+aside {
+  margin-top: 50px;
+  width: 45%;
+  background-color: #feeeaa;
+  border: 1px solid black;
+  border-radius: 1.5em;
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 10px;
+  padding-top: 30px;
+  box-shadow: -5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.red-caption {
+  position: absolute;
+  background-color: #bc0000;
+  color: #feeeaa;
+  padding: 5px;
+  font-family: sans-serif, "Arial";
+  bottom: 490px;
+}
+form {
+  background-color: #feeeaa;
+}
+form > div {
+  background-color: #feeeaa;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+form > div:: after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input {
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
+}
+label {
+  background-color: #feeeaa;
+  width: 50%;
+  box-sizing: border-box;
+}
+div#select-holder {
+  height: 80px;
+}
+select#refferal-source {
+  width: 50%;
+  /*box-sizing: border-box;*/
+  float: right;
+  margin-top: -20px;
+}
+select#order-type {
+  width: 50%;
+  float: right;
+}
+input#dine-out-count {
+  width: 20%;
+}
+input#check-b {
+  width: 5%;
+  float: left;
+  box-sizing: border-box;
+}
+p#check-p {
+  width: 50%;
+  float: right;
+  box-sizing: border-box;
+}
+input#big {
+  height: 50px;
+  float: none;
+  margin: 10px;
+  width: 90%;
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+        const bannerLogo = document.getElementById("banner-logo");
+const customerInfoForm = document.getElementById("customer-information");
+let hamburgerSrc =
+  "https://drive.google.com/uc?id=1CnkfA7eH9vAEcuHo-eSbTh0QQdnpIcQb";
+let greenCheck =
+  "https://drive.google.com/uc?id=1LDcwQ0vWPkphHPOMDOzOZ8ei3P5hEunv";
+let bannerSrc =
+  "https://drive.google.com/uc?id=1XVrJasLndnCWu2aB1AbxBrHP4CxtZ7YP";
+let checkerBoard =
+  "https://drive.google.com/uc?id=1xTkMkhjX350bTk1q0hZXm6RwQKKK0j4T";
+
+document.body.style.backgroundImage = `url(${checkerBoard})`;
+bannerLogo.src = bannerSrc;
+
+customerInfoForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+});
+
+    </script>
+</body>
